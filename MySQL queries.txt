@@ -1,0 +1,21 @@
+This all query is for MySQL.
+
+create table users(
+	first_name varchar(40),
+    middle_name varchar(40),
+	email_id varchar(50) primary key,
+    passwordd varchar(50),
+    sec_ques varchar(50),
+    sec_ans varchar(50),
+    dob date,
+    gender varchar(50)
+);
+
+create table hasrecord(
+	weight decimal(5,2),
+    height decimal(5,2),
+    bmi decimal(5,2),
+    calin int,
+    email_id varchar(50),
+    foreign key (email_id) references users(email_id)
+);
